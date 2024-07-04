@@ -1,0 +1,19 @@
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()">
+      <!-- About Section Inputs -->
+      <h2>About Section</h2>
+      <textarea [(ngModel)]="aboutText" name="aboutText" placeholder="Enter About Me Content"></textarea>
+      
+      <!-- Contact Section Inputs -->
+      <h2>Contact Section</h2>
+      <input type="email" [(ngModel)]="contactEmail" name="contactEmail" placeholder="Enter Contact Email">
+      
+      <!-- Projects Section Inputs -->
+      <h2>Projects Section</h2>
+      <input type="url" [(ngModel)]="projectUrl" name="projectUrl" placeholder="Enter Project URL">
+      <input type="text" [(ngModel)]="projectTitle" name="projectTitle" placeholder="Enter Project Title">
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

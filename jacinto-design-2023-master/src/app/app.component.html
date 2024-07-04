@@ -1,0 +1,109 @@
+<!-- Navigation -->
+<div class="nav-wrapper">
+    <div class="menu-icon" (click)="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <nav id="nav">
+      <ul>
+          <li><a href="#home" (click)="hideMenu()">Home</a></li>
+          <li><a href="#about" (click)="hideMenu()">About</a></li>
+          <li><a href="#projects" (click)="hideMenu()">Projects</a></li>
+          <li><a href="#contact" (click)="hideMenu()">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Form Section -->
+    <section id="form">
+        <div class="form-container">
+            <app-content-form (formData)="updateContent($event)"></app-content-form>
+        </div>
+    </section>
+  <!-- Main Content -->
+  <main class="main-container">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="slideshow">
+            <img src="../assets/img/slideshow/cyberpunk1.jpg" alt="AI Generated: Cyberpunk futuristic city at midnight with bright pink moon" class="slide active">
+            <img src="../assets/img/slideshow/cyberpunk2.jpg" alt="AI Generated: Cyberpunk futuristic city in the evening, skyscapers in the distance" class="slide" loading="lazy">
+            <img src="../assets/img/slideshow/cyberpunk3.jpg" alt="AI Generated: Cyberpunk futuristic city at dawn, skyscapers in the distance" class="slide" loading="lazy">
+            <img src="../assets/img/slideshow/cyberpunk4.jpg" alt="AI Generated: Cyberpunk futuristic city street market at night with people shopping" class="slide" loading="lazy">
+            <img src="../assets/img/slideshow/cyberpunk5.jpg" alt="AI Generated: Cyberpunk futuristic city at dawn, spaceship restaurant in foreground" class="slide" loading="lazy">
+        </div>
+        <div class="page-title">
+           
+            <br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>br
+            <br><br> <br> <br> <br><br> <br> <br> <br> <br>
+            <br> <br> <br> <br> <br>
+
+            <h1>Ines Mekki</h1>
+        </div>
+        <div class="mouse"></div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <div class="section-title">
+              <h2>About</h2>
+            </div>
+            <div class="about-content">
+              {{ aboutText }}
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="projects-container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div *ngIf="projectUrl && projectTitle" class="grid-item">
+                    <a [href]="projectUrl" target="_blank">{{ projectTitle }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <div class="section-title">
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-content">
+                <p>Email: {{ contactEmail }}</p>
+            </div>
+        </div>
+    </section>
+  
+    
+    
+    <!-- Footer -->
+    <footer>
+        <!-- Social Media -->
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/JacintoDesignCourses/" target="_blank" aria-label="Follow me on Facebook" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>             
+            <a href="https://www.youtube.com/@ZeroToMastery" target="_blank" aria-label="Subscribe to the ZTM YouTube channel" title="Youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://twitter.com/mynameisjacinto" target="_blank" aria-label="Follow me on Twitter (X)" title="Twitter (X)">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>                    
+            <a href="https://www.linkedin.com/in/jacintowong/" target="_blank" aria-label="Follow me on LinkedIn" title="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>              
+            <a href="https://github.com/JacintoDesign" target="_blank" aria-label="Follow me on Github" title="Github">
+                <i class="fa-brands fa-github"></i>
+            </a> 
+        </div>
+        <!-- Footer Text -->
+        <small>&copy; 2024 Jacinto Design. All rights reserved.</small>
+    </footer>
+  </main>
+  
